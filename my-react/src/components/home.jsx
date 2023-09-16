@@ -1,12 +1,14 @@
 import React from "react";
-
-function home() {
+import home from "../css/home.css";
+function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <div className="center">
+      <h1>GitHub Repository Analyzer</h1>
+      </div>
     </div>
   );
 }
 
 
-export default home;
+export default Home;
