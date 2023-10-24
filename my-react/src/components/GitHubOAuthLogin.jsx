@@ -1,9 +1,11 @@
 import React from "react";
+import GitHubUserInfo from "./GitHubUserInfo";
 
 function GitHubOAuthLogin() {
   
+
     const handleLogin = () => {
-    window.location.href = "http://localhost:2400/";
+    window.location.href = process.env.REACT_APP_API_URL;
   };
 
   return (

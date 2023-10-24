@@ -4,6 +4,14 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import GitHubUserInfo from "./components/GitHubUserInfo";
 
 function App() {
+
+//   const handleLogin = () => {
+//     dispatch(setLoggedIn());
+//   };
+
+// const handleLogout = () => {
+//   dispatch(setLoggedOut());
+// };
   return (
    <Router> 
       <Routes>
