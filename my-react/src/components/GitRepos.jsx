@@ -10,32 +10,26 @@ function GitRepos(){
     const user = userData?.login;
     //console.log("User", user);
 
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                dispatch(fetchAllReposThunk(user));
-            } catch (error) {
-                console.error("Error fetching data: ", error);
-            }
-        }
-        console.log("RepoState", reposData);
-        //console.log("ReposState", reposData);
-        fetchData();
-    }, [dispatch]);
+    // useEffect(() => {
+    //     async function fetchData() {
+    //         try {
+    //             dispatch(fetchAllReposThunk(user));
+    //         } catch (error) {
+    //             console.error("Error fetching data: ", error);
+    //         }
+    //     }
+    //     
+    //     //console.log("ReposState", reposData);
+    //     fetchData();
+    // }, [dispatch]);
 
 
-
+    console.log("RepoState", reposData);
 
     return (
         <div>
     <h1>Git Repos for {user}</h1>
-    <div>
-      {reposData?.map((repo) => (
-        <div key={repo.id}>
-          <h2>{repo.name}</h2>
-        </div>
-      ))}
-    </div>
+    
   </div>
     );
 } 
