@@ -1,55 +1,31 @@
-import React from "react";
-import fetchUserThunk from "../redux/user/user.actions";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import GitRepos from "./GitRepos";
+import { fetchUserThunk } from "../redux/user/user.actions";
 import { fetchAllReposThunk } from "../redux/repo/repos.actions";
+import GitRepos from "./GitRepos";
 import { debounce } from "lodash";
 
 function GitHubUserInfo() {
   const dispatch = useDispatch();
-  //const state = useSelector((state) => state);
   const userData = useSelector((state) => state?.user.user.userData);
-  const user = userData?.login;
   const reposData = useSelector((state) => state?.repos.allRepos);
-  //const repos = reposData?.map((repo) => repo.name);
-  //const debouncedFetchRepos = debounce(dispatch(fetchAllReposThunk), 500); // Adjust the debounce delay as needed
-  //const debouncedFetchUser = debounce(dispatch(fetchUserThunk), 500); // Adjust the debounce delay as needed
-
-  //console.log("username: " , state);
-
-  const fetchAllRepos = (user)  => {
-    return dispatch(fetchAllReposThunk(user));
-  };
-
-  const fetchUser = () => {
-    return dispatch(fetchUserThunk());
-  };
+  const user = userData?.login;
 
   useEffect(() => {
-    try {
-      fetchUser();
-      fetchAllRepos(user)
-    } catch (error) {
-      console.error("Error fetching repo data: ", error);
+    async function fetchData() {
+      try {
+        // Fetch user data
+        await dispatch(fetchUserThunk());
+        // Fetch all repositories
+        await dispatch(fetchAllReposThunk(user));
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
     }
-    
-  }, []);
-  
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     try {
-  //       //dispatch(fetchUserThunk());
-  //       //dispatch(fetchAllReposThunk(user));
-  //       debouncedFetchUser();
-  //     } catch (error) {
-  //       console.error("Error fetching data: ", error);
-  //     }
-  //   }
-  //   console.log("UserState", userData);
-  //   //console.log("ReposState", reposData);
-  //   fetchData();
-  // }, [dispatch]);
+
+    // Call fetchData when the component mounts or when reposData changes
+    fetchData();
+  }, [user]); // Listen for changes in the 'user' variable
 
   return (
     <div>
