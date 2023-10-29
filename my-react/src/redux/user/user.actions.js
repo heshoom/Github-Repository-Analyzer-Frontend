@@ -11,7 +11,6 @@ export const fetchUser = (userData) => ({
 export const fetchUserThunk = () => async dispatch => {
     try {
         const res = await axios.get(`${backendAPI}/success` ,);
-        console.log("user thunk response:", res.data);
         dispatch(fetchUser(res.data));
     } catch (err) {
         console.log(err);

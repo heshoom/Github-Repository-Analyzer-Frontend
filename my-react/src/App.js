@@ -2,8 +2,8 @@ import React from "react";
 import Home from "./components/Home";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import GitHubUserInfo from "./components/GitHubUserInfo";
-import Layout from "./components/Layout";
-
+import GitRepo from "./components/GitRepo";
+import Navbar from "./components/NavBar";
 function App() {
 
 //   const handleLogin = () => {
@@ -15,12 +15,12 @@ function App() {
 // };
   return (
    <Router> 
-    <Layout>
+    <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/UserInfo" element={<GitHubUserInfo/>}/>
+        <Route path="/:username/:repoid" element={<GitRepo/>}/>
       </Routes>
-      </Layout>
     </Router>
   );
 }

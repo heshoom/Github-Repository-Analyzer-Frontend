@@ -1,21 +1,21 @@
-// Navbar.js
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import '../css/navbar.css'
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  const url = useLocation();
-  
+function Navbar() {
   return (
-    <nav className='nav'>
-      <div className="center">
-          {url.pathname != "/" ? <Link to="/">Home</Link> : null}
-          {/* {url.pathname != "/userInfo" ? <Link to="/">Home</Link> : null} */}
-          <Link to="/repos">Repos</Link>
-          <Link to="">Logout</Link>
-      </div>
+    <nav className="nav">
+      <Link to="/" className="site-title">
+        Github Repo Analyser
+      </Link>
+      <ul>
+        <li>
+          <Link to="/pricing">Repos</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+      </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;

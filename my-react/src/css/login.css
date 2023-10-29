@@ -1,0 +1,78 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f6f4f4;
+}
+
+h1 {
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #ffffff;
+}
+.github-logo {
+  width: 30px; /* Adjust the size as needed */
+  margin-right: 10px; /* Adjust the spacing as needed */
+}
+
+.github-logo:hover {
+  opacity: 0.7;
+}
+.github-button {
+    background-color: #000000;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4b4b4b;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.button-with-image {
+  display: flex;
+  align-items: center;
+}
+
+.button-with-image img {
+  width: 20px;
+  height: 20px;
+}
+
+body {
+  background-color: #040212;
+  background-image: url('../assets/images/crystalbackground.jpeg'); 
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Set the height to the viewport height for vertical centering */
+}
+
+.container {
+  background-color: rgb(26, 26, 26);
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 20rem;
+  width: 35rem;
+  gap: 1rem;
+}
