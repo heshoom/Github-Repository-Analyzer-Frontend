@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/UserInfo" element={<GitHubUserInfo/>}/>
-        <Route path="/:username/:repoid" element={<GitRepo/>}/>
+        <Route path="/:username/:name" element={<GitRepo/>}/>
       </Routes>
     </Router>
   );

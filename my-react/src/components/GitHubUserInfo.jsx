@@ -33,8 +33,8 @@ function GitHubUserInfo() {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = reposData?.slice(indexOfFirstItem, indexOfLastItem);
 
-  const navigateTo = (repoid) => {
-    navigate(`/${user}/${repoid}`);
+  const navigateTo = (name) => {
+    navigate(`/${user}/${name}`);
   };
 
   return (
@@ -61,7 +61,7 @@ function GitHubUserInfo() {
         {currentItems?.map((repo) => (
           <div key={repo.id} className="center">
             <h1>
-              <button onClick={() => navigateTo(repo.id)}>{repo.name}</button>
+              <button onClick={() => navigateTo(repo.name)}>{repo.name}</button>
             </h1>
           </div>
         ))}

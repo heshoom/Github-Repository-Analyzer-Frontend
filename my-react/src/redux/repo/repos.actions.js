@@ -29,7 +29,7 @@ export const fetchSelectedRepo = (payload) => {
 export const fetchSelectedRepoThunk = (username, name) => {
     return async (dispatch) => {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/repo/${username}/${name}`);
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/getRepo/${username}/${name}`);
             dispatch(fetchSelectedRepo(response.data));
         } catch (error) {
             console.error(error);
