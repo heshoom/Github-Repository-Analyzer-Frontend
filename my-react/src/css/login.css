@@ -2,6 +2,10 @@ body {
   text-align: center;
   font-family: Arial, sans-serif;
   background-color: #f6f4f4;
+  background-color: #040212;
+  background-image: url('../assets/images/crystalbackground.jpeg'); 
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -48,13 +52,6 @@ button:hover {
 .button-with-image img {
   width: 20px;
   height: 20px;
-}
-
-body {
-  background-color: #040212;
-  background-image: url('../assets/images/crystalbackground.jpeg'); 
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .parent-container {
