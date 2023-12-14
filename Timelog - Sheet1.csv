@@ -1,0 +1,17 @@
+Date,Description of completed work
+08/31/2023,-Orientation Quiz
+09/07/2023,"-Start Building project. Installed React Modules, Node/js, PostgreSql, and Postico for Database mangament"
+09/14/2023,"-Implemented User Routes, lots of debugging. Implemented GitHub OAuth login"
+09/21/2023,"-Implemented User Routes, lots of debugging"
+09/28/2023,-Reviewing fundamentals of routing in backend servers
+10/05/2023,-Went to seek Support from instructor for advice on how to catch up with Project deadlines due to setbacks in the project
+10/12/2023,-Delays in project improvements due to issues with API's. I took time trying to understand how to use GitHub's ocktokit to utilize their API
+10/19/2023,-Added UserInfo page that shows a list of all repositories that belongs to the user. Mapped list of all user's repo in /UserInfo page
+10/26/2023,-All repositories now appear when component mounts. Previously I had problems with Async Functions not displaying data
+11/02/2023,-Added pagination buttons for paginated lists of repositories
+11/09/2023,"-Implemented Thunks to fetch repos, Implemented thunks for dispatching login, logout states."
+11/16/2023,-Included Average time to first comment after a pull request is made metric
+11/23/2023,-Implemented Average time in hours from when pull requests are created to when they're merged metric
+11/30/2023,-Used charts from Chart.js website to show the average of last 5 pull requests when they're made to when they were merged through a bar chart
+12/07/2023,-added average of last 30 PR
+12/13/2023,-Focusing on deployment and presentation slides. Made Final Demo and got Supervisor evaluation 
