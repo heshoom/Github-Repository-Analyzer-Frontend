@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./components/Home";
+import Home from "./components/home";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import GitHubUserInfo from "./components/GitHubUserInfo";
 import GitRepo from "./components/GitRepo";
