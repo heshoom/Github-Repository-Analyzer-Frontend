@@ -11,7 +11,7 @@ export const fetchAllRepos = (payload) => {
 export const fetchAllReposThunk = (username) => {
     return async (dispatch) => {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/getRepo/${username}`);
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/getRepo/${username}`);
             dispatch(fetchAllRepos(response.data));
         } catch (error) {
             console.error(error);

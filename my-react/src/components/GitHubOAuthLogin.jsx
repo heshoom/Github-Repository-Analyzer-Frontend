@@ -4,7 +4,7 @@ import githubMarkWhite from "../assets/github-mark/github-mark-white.png";
 
 function GitHubOAuthLogin() {
   const handleLogin = () => {
-    window.location.href = process.env.REACT_APP_API_URL;
+    window.location.href = process.env.REACT_APP_API_URL || "https://github-repository-analyzer-backend.vercel.app/";
   };
 
   return (

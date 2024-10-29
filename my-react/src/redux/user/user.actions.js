@@ -10,7 +10,7 @@ export const fetchUser = (userData) => ({
   
 export const fetchUserThunk = () => async dispatch => {
     try {
-        const res = await axios.get(`${backendAPI}/success` ,);
+        const res = await axios.get(`${backendAPI}/gitLogin/success` ,);
         dispatch(fetchUser(res.data));
     } catch (err) {
         console.log(err);
